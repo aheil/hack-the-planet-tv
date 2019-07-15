@@ -1,20 +1,161 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 <!-- development version, includes helpful console warnings -->
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <!-- production version, optimized for size and speed -->
 <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+<link rel="stylesheet" type="text/css" href="main.css" media="screen" />
+
+<link href="fontawesome-free-5.9.0-web/css/all.css" rel="stylesheet">
+<!--load all styles -->
+
+
+<!-- FavIcon -->
+<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>My App</title>
+    <title>Hack-the-Planet TV</title>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-  </head>
-  <body>
-    <div id="app">
+</head>
+
+<body>
+    <div>
+        <img src="images/logo_v3.png" id="logo" />
+    </div>
+    <!--   <div id="app">
       {{message}}
     </div>
+--->
+<div class="clearfix"></div>
+    <section id="section" class="service">
+        <div class="container">
+            <div class="row busiprof-features-content">
+
+                <div class="col-md-3 col-sm-6 col-xs-12 service-box">
+                    <div class="post">
+
+                        <a href="https://www.twitch.tv/hacktheplanettv">
+                            <div class="service-icon">
+                                <i class="fab fa-twitch"></i>
+                            </div>
+
+                            <div class="entry-header">
+                                <h4 class="entry-title">Twitch Kanal</h4>
+                            </div>
+                        </a>
+
+                        <div class="entry-content">
+                            <p>Alles Mögliche rund um Programmieren, Software Engineering mit netten Leuten auf Twitch.
+                            </p>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 col-sm-6 col-xs-12 service-box">
+                    <div class="post">
+
+                        <a href="https://github.com/hack-the-planet-tv">
+                            <div class="service-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+
+                            <div class="entry-header">
+                                <h4 class="entry-title">Code</h4>
+                            </div>
+                        </a>
+
+                        <div class="entry-content">
+                            <p>Code Beispiele aus den Live Streams und Videos als Open Source. </p>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 service-box">
+                    <div class="post">
+
+                        <a href="https://www.youtube.com/channel/UCbLfQHgX4CS2us60SvjlnGg">
+                            <div class="service-icon">
+                                <i class="fab fa-youtube"></i>
+                            </div>
+
+                            <div class="entry-header">
+                                <h4 class="entry-title">YouTube</h4>
+                            </div>
+                        </a>
+
+                        <div class="entry-content">
+                            <p>Live Stream verpasst? Viele Inhalte gibt es nach und nach auch auf YouTube!</p>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 col-sm-6 col-xs-12 service-box">
+                    <div class="post">
+
+                        <a href="#">
+                            <div class="service-icon">
+                                <i class="fas fa-microphone"></i>
+                            </div>
+
+                            <div class="entry-header">
+                                <h4 class="entry-title">Podcast</h4>
+                            </div>
+                        </a>
+
+                        <div class="entry-content">
+                            <p>Noch nicht genug? Bald der Podcast zu aktuellen Themen rund um aktuelle Technologien.
+                                Stay tuned!
+                            </p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script src="index.js"></script>
-  </body>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+
 </html>
