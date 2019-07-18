@@ -13,11 +13,25 @@
          url('fonts/montserrat-v13-latin/montserrat-v13-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
   }
 
+  @font-face {
+    font-family: 'Droid Sans';
+    font-style: normal;
+    src: 
+         url('fonts/droid-sans/DroidSans.ttf')  format('truetype') /* Safari, Android, iOS */
+  }
+
+  @font-face {
+    font-family: 'Droid Serif';
+    font-style: italic;
+    src: 
+         url('fonts/droid-serif/DroidSerif-Italic.ttf')  format('truetype') /* Safari, Android, iOS */
+  }
+
 #logo {
     display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
 }
 
 body {
@@ -106,6 +120,10 @@ h4, .h4 {
     color: #81d742;
 }
 
+/* Portfolio Section Css ----------------------------------------------------------------------------------------------------------- */
+.bg-color { background: #f7f7f7; border-top: 1px solid #e4e8ea; border-bottom: 1px solid #e4e8ea; }
+
+
 /* Service Section Css ----------------------------------------------------------------------------------------------------------- */
 .service .post { 
 	background-color: #f7f7f7; 
@@ -169,3 +187,61 @@ h4, .h4 {
 .other-service .post .entry-header .entry-title { font-weight: 400; font-size: 15px; margin: 0; } 
 .other-service .entry-header .entry-title > a { color: #404b56; }
 .other-service .entry-header .entry-title > a:hover { color: #2a7bc1; }
+
+/*Testimonial Scroll*/
+.testimonial-scroll .post { margin: 0 0 40px; }
+.testimonial-scroll .post .entry-content { 
+	border: 1px solid #e4e8ea;
+    border-radius: 7px;
+    clear: both;
+    display: block;
+    padding: 16px;
+	margin: 0 0 25px;
+    position: relative; 
+}
+.testimonial-scroll .post .entry-content:after, 
+.testimonial-scroll .post .entry-content:before {
+	bottom: -30px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.testimonial-scroll .post .entry-content:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #ffffff;
+	border-width: 15px;
+	left: 24px;
+	margin-left: -0px;
+}
+.testimonial-scroll .post .entry-content:before {
+	border-color: rgba(228, 232, 234, 0);
+	border-top-color: #719ECE;
+	border-width: 15px;
+	left: 24px;
+	margin-left: -15;
+}
+/**.testimonial-scroll .post .post-thumbnail { float: left; margin: 0 20px 0 10px; overflow: hidden; } */
+.testimonial-scroll .author-name { 
+	background-color: transparent;
+	display: block; 
+	font-size: 15px; 
+	margin: 17px 0 0; 
+	padding: 0;
+	color: #2a7bc1;
+	font-weight: 700;
+}
+.testimonial-scroll .designation { color: #737f85; font-weight: 400; }
+.testimonial-scroll .post-thumbnail img { border-radius: 50%; background-color: #fff; border: 1px solid #d2d2d2; padding: 3px; width: 60px; height: 60px; }
+
+
+/* Section Title Css --------------------------------------------------------------------------------------------------------------- */
+.section-title { margin: 0 0 37px; padding: 0 15px; display: block; text-align: center; }
+.section-title .section-heading { font-family: 'Droid Sans'; color: #354656; font-weight: 400; margin: 0px 0 6px; }
+.section-title p, .section-title-small p { color: #9ea5a1; font-family: "Droid Serif"; font-weight: 400; font-style: italic; margin: 0; }
+
+
+/** Common Css Css ------------------------------------------------------------------------------------------------------------------ */
+#section {margin: 0;padding: 60px 0 20px;}
