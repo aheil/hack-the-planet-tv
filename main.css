@@ -27,6 +27,29 @@
          url('fonts/droid-serif/DroidSerif-Italic.ttf')  format('truetype') /* Safari, Android, iOS */
   }
 
+  @font-face {
+    font-family: 'FontAwesome';
+    font-style: normal;
+    src: local('Font Awesome'), local('Font-Awesome'),
+    url('fonts/fontawesome-free-5.9.0-web/webfonts/fa-regular-400.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('fonts/fontawesome-free-5.9.0-web/webfonts/fa-regular-400.woff2') format('woff2'), /* Super Modern Browsers */
+    url('fonts/fontawesome-free-5.9.0-web/webfonts/fa-regular-400.woff') format('woff'), /* Modern Browsers */
+    url('fonts/fontawesome-free-5.9.0-web/webfonts/fa-regular-400.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('fonts/fontawesome-free-5.9.0-web/webfonts/fa-regular-400.svg#Montserrat') format('svg'); /* Legacy iOS */
+  }
+    @font-face {
+        font-family: 'FontAwesomeSolid';
+        font-style: normal;
+        src: local('Font Awesome Solid'), local('Font-Awesome-Solid'),
+        url('fonts/fontawesome-free-5.9.0-web/webfonts/fa-solid-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('fonts/fontawesome-free-5.9.0-web/webfonts/fa-solid-900.woff2') format('woff2'), /* Super Modern Browsers */
+        url('fonts/fontawesome-free-5.9.0-web/webfonts/fa-solid-900.woff') format('woff'), /* Modern Browsers */
+        url('fonts/fontawesome-free-5.9.0-web/webfonts/fa-solid-900.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('fonts/fontawesome-free-5.9.0-web/webfonts/fa-solid-900.svg#Montserrat') format('svg'); /* Legacy iOS */
+    }
+
+
+
 #logo {
     display: block;
     margin-left: auto;
@@ -144,7 +167,7 @@ h4, .h4 {
 .service .post .entry-header { display: block; margin: 0 0 15px; padding: 0; }
 .service .post .entry-header .entry-title { font-weight: 400; margin: 0 0 12px; } 
 .service .entry-header .entry-title > a { color: #404b56; }
-.service .post:hover .entry-header .entry-title > a { color: #2a7bc1; }
+.service .post:hover .entry-header .entry-title > a { color: #00AA00; }
 .btn-wrap { margin: 0 0 40px; text-align: center; }
 .btn-wrap a	{
 	background-color: #5ca2e0;
@@ -186,8 +209,27 @@ h4, .h4 {
 .other-service .post .entry-header { display: block; margin: 0; padding: 0; }
 .other-service .post .entry-header .entry-title { font-weight: 400; font-size: 15px; margin: 0; } 
 .other-service .entry-header .entry-title > a { color: #404b56; }
-.other-service .entry-header .entry-title > a:hover { color: #2a7bc1; }
+.other-service .entry-header .entry-title > a:hover { color: #00AA00; }
 
+/*Testimonial Scroll*/
+
+
+/* Section Title Css --------------------------------------------------------------------------------------------------------------- */
+.section-title { margin: 0 0 37px; padding: 0 15px; display: block; text-align: center; }
+.section-title .section-heading { font-family: 'Droid Sans'; color: #354656; font-weight: 400; margin: 0px 0 6px; }
+.section-title p, .section-title-small p { color: #9ea5a1; font-family: "Droid Serif"; font-weight: 400; font-style: italic; margin: 0; }
+
+
+/** Common Css Css ------------------------------------------------------------------------------------------------------------------ */
+#section {margin: 0;padding: 60px 0 20px;}
+
+/* Testimonial Section Css --------------------------------------------------------------------------------------------------------------------- */
+.testimonial .post { margin: 0 0 40px; }
+.testimonial .post .post-thumbnail { float: left; margin: 0 20px 0 0; overflow: hidden; position: relative; height: 80px; }
+.testimonial .post .post-thumbnail img { transition: all 0.5s ease 0s; }
+.testimonial .post:hover .post-thumbnail img { transform: rotate(-25deg); opacity: 0.9; }
+.author-name { background-color: #f2f5f6; display: block; font-size: 14px; margin: 17px 0 0; padding: 1px 7px; color: #00AA00; }
+.designation { color: #737f85; }
 /*Testimonial Scroll*/
 .testimonial-scroll .post { margin: 0 0 40px; }
 .testimonial-scroll .post .entry-content { 
@@ -230,18 +272,135 @@ h4, .h4 {
 	font-size: 15px; 
 	margin: 17px 0 0; 
 	padding: 0;
-	color: #2a7bc1;
+	color: #00AA00;
 	font-weight: 700;
 }
 .testimonial-scroll .designation { color: #737f85; font-weight: 400; }
 .testimonial-scroll .post-thumbnail img { border-radius: 50%; background-color: #fff; border: 1px solid #d2d2d2; padding: 3px; width: 60px; height: 60px; }
+/* Direction Nav */
+.testi-nav { *height: 0; list-style-type: none; margin: -20px 0 0; padding: 0; float: right; }
+.testi-nav li { display: inline-block; padding: 0; }
+.testi-nav a {
+	background-color: #e3e3e3;
+	border-radius: 50%;
+    text-decoration: none;
+    display: block;
+    width: 22px;
+    height: 22px;
+    margin: 0;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    opacity: 0;
+    cursor: pointer;
+	text-align: center;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.testi-nav .testi-prev { left: 0; opacity: 1; }
+.testi-nav .testi-next { right: 0; opacity: 1; }
+.testi-next:hover, .testi-prev:hover { background-color: #00AA00; color: #ffffff; }
+.testi-nav .carou-disabled { opacity: 0!important; filter: alpha(opacity=0); cursor: default; }
+.testi-nav a:before {
+    font-family: "FontAwesome";
+    font-size: 17px;
+	color: #000;
+    line-height: 1.3;
+    display: inline-block;
+    content: '\f104';
+	transition: all .3s ease;
+}
+.testi-nav:hover a:before { color: #ffffff; }
+.testi-nav a.testi-next:before { content: '\f105'; }
+
+.home-post-img img{height:80px;}
 
 
-/* Section Title Css --------------------------------------------------------------------------------------------------------------- */
-.section-title { margin: 0 0 37px; padding: 0 15px; display: block; text-align: center; }
-.section-title .section-heading { font-family: 'Droid Sans'; color: #354656; font-weight: 400; margin: 0px 0 6px; }
-.section-title p, .section-title-small p { color: #9ea5a1; font-family: "Droid Serif"; font-weight: 400; font-style: italic; margin: 0; }
+/* Testimonial Section Css --------------------------------------------------------------------------------------------------------------------- */
+.testimonial .post { margin: 0 0 40px; }
+.testimonial .post .post-thumbnail { float: left; margin: 0 20px 0 0; overflow: hidden; position: relative; }
+.testimonial .post .post-thumbnail img { transition: all 0.5s ease 0s; }
+.testimonial .post:hover .post-thumbnail img { transform: rotate(-25deg); opacity: 0.9; }
+.author-name { background-color: #f2f5f6; display: block; font-size: 14px; margin: 17px 0 0; padding: 1px 7px; }
+.designation { color: #737f85; }
+/*Testimonial Scroll*/
+.testimonial-scroll .post { margin: 0 0 40px; }
+.testimonial-scroll .post .entry-content { 
+	border: 1px solid #e4e8ea;
+    border-radius: 7px;
+    clear: both;
+    display: block;
+    /* padding: 16px 25px; */
+	padding: 23px 25px 23px 75px;
+	margin: 0 0 16px;
+    position: relative; 
+}
+.testimonial-scroll .post .entry-content p { font-size: 16px; line-height: 27px; } 
+.testimonial-scroll .post .entry-content p:before {
+    position: absolute;
+	content: '\f10d';
+    font-family: "FontAwesomeSolid";
+    top: 25px;
+    left: 25px;
+    font-size: 35px;
+    line-height: 1;
+    text-align: center;
+    font-weight: 700;
+    color: #00AA00;
+}
+.testimonial-scroll .post .entry-content:after, 
+.testimonial-scroll .post .entry-content:before {
+	bottom: -30px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.testimonial-scroll .post .entry-content:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #ffffff;
+	border-width: 15px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+.testimonial-scroll .post .entry-content:before {
+	border-color: rgba(228, 232, 234, 0);
+	border-top-color: #719ECE;
+	border-width: 15px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+/* .testimonial-scroll .post .post-thumbnail { margin: 0px 0 25px; overflow: hidden; } */
+/* .testimonial-scroll .post-thumbnail img { border-radius: 50%; background-color: #fff; border: 1px solid #d2d2d2; padding: 4px; width: 100px; height: 100px; margin: 0 auto; } */
+.testimonial-scroll .post .post-thumbnail { margin: 0px auto 25px; width: 100px; height: 100px; }
+.testimonial-scroll .post-thumbnail img { border-radius: 50%; background-color: #fff; border: 1px solid #d2d2d2; padding: 4px; width: 100px; height: 100px; margin: 0; }
 
 
-/** Common Css Css ------------------------------------------------------------------------------------------------------------------ */
-#section {margin: 0;padding: 60px 0 20px;}
+.testimonial-scroll .author-name { 
+	background-color: transparent;
+	display: block; 
+	font-size: 16px; 
+	margin: 17px 0 0; 
+	padding: 0;
+	font-weight: 700;
+	text-align: center;
+}
+
+.author-name a {
+    color: #00AA00;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+
+.author-name a:hover {
+    color: darkgreen;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+
+.testimonial-scroll .designation { color: #737f85; font-size: 14px; font-weight: 400; display: block; }
