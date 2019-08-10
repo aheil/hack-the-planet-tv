@@ -1,4 +1,5 @@
-.DS_Store
 fonts/.DS_Store
 images/.DS_Store
 temp/
+.DS_Store
+hack-the-planet-tv.code-workspace
