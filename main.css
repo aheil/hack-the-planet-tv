@@ -133,7 +133,7 @@ h4, .h4 {
 
 
 .service-box:nth-child(1) .service-icon {
-    color: #e91e63;
+    color: #3a2568;
 }
 .service-box:nth-child(2) .service-icon {
     color: #00bcd4;
@@ -141,6 +141,13 @@ h4, .h4 {
     color: #dd3333;
 }.service-box:nth-child(4) .service-icon {
     color: #81d742;
+}
+
+.reddit-icon {
+    color: #FB2C08;
+}
+.discord-icon {
+    color: #5F73D1;
 }
 
 /* Portfolio Section Css ----------------------------------------------------------------------------------------------------------- */
